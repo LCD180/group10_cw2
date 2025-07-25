@@ -21,21 +21,22 @@
 }
 
 .nav {
-    box-shadow: 0px 5px 5px 0px #1212121f;
+    box-shadow: 0px 5px 5px 0px #12121208;
 
-    top: 0;
-    left: 0; 
-    right: 0; 
+    margin: 10px;
 
-    width: 100%;
-    height: auto;
-    padding: 10px;
+    width: auto;
+    height: 65px;
+    padding: 5px;
+    gap: 10px;
+
+    border-radius: 12px;
   
     justify-content: space-between;
     align-items: center;
   
-    background-color: #ffffffcc;
-    color: #121212;
+    background-color: #304F47;
+    color: #ffffff;
 
     position: sticky;
     display: flex;
@@ -50,9 +51,9 @@
 }
 
 
-button {
-    border: 2px solid #24b4fb;
-    background-color: #24b4fb;
+.buttonCust {
+    border: 2px solid #3A5F55;
+    background-color: #263F39;
     border-radius: 0.9em;
     cursor: pointer;
     padding: 0.8em 1.2em 0.8em 1em;
@@ -60,7 +61,7 @@ button {
     font-size: 16px;
 }
 
-button span {
+.buttonCust span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +69,7 @@ button span {
     font-weight: 600;
 }
 
-button:hover {
-    background-color: #0071e2;
+.buttonCust:hover {
+    background-color: #2c4941;
+    border: 3px solid #233d37;
 }
-  
