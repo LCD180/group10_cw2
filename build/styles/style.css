@@ -21,21 +21,17 @@
 }
 
 .nav {
-    box-shadow: 0px 5px 5px 0px #12121208;
-
-    margin: 10px;
+    box-shadow: 0px 5px 5px 0px #42424208;
 
     width: auto;
     height: 65px;
     padding: 5px;
     gap: 10px;
-
-    border-radius: 12px;
-  
+    
     justify-content: space-between;
     align-items: center;
   
-    background-color: #304F47;
+    background-color: #303030;
     color: #ffffff;
 
     position: sticky;
