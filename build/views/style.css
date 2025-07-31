@@ -1,0 +1,12 @@
+.color-box {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}  
+
+.color-box:hover {
+    outline: 2px solid #007bff;
+}
