@@ -80,3 +80,9 @@ img {
     display: block;
 }  
 
+[class^="img-fluid-rounded-"] {
+    filter: blur(3px);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
