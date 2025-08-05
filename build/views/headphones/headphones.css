@@ -20,6 +20,7 @@
     }
 }
 
+
 .navglass {
     position: sticky;
     background: rgba(35, 35, 35, 0.15);
@@ -72,7 +73,7 @@
     display: flex;
 }
 
-.buttonCust {
+[class^=buttonCust] {
     border: transparent;
     background-color: transparent;
     color: #fff;
@@ -83,7 +84,7 @@
     font-weight: bolder;
 }
 
-.buttonCust span {
+[class^=buttonCust] span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,20 +92,9 @@
     font-weight: 900;
 }
 
-.buttonCust:hover {
+[class^=buttonCust]:hover {
     color: #969696;
 }
-
-
-.color-box {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin: 0 5px;
-    border-radius: 4px;
-    cursor: pointer;
-}  
-
 
 .color-box {
     display: inline-block;
@@ -121,14 +111,6 @@
 
 .top-container {
     background: linear-gradient(to bottom, #363636, rgba(255, 255, 255, 0.2));
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-}
-.top-containerNoGrad {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -178,7 +160,7 @@
     height: 100%;
     object-fit: contain;
 
-
+    
 }
 
 html, body {
@@ -190,6 +172,36 @@ html, body {
     padding-top: 5%;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}  
+
+[class^="img-fluid-rounded-"] {
+    filter: blur(3px);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+header.top {
+  background-image: url('../images/background.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px; /* or adjust as needed */
+  position: relative;
+}
+
+.top-bar {
+    padding-top: 9px;
+    padding-left: 16px;
+    padding-bottom: 9px;
+    padding-right: 16px;
+    fill: 396px;
+    gap: 8px;
+
+}
 
 
 
