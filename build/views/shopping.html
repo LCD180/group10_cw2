@@ -11,16 +11,31 @@
 <body>
 
 <!-- Nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-<a class="navbar-brand" href="#">🎧</a>
-<div class="collapse navbar-collapse">
-    <ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
-    </ul>
-</div>
+<nav class="navglass" style="position: sticky; top: 0; z-index: 1000;">
+    <div style="font-size: larger; padding-left: 20px; padding-right: 5px;">
+        <i class="bi bi-earbuds fs-5 text-white"></i>
+        <button class="buttonCust1">
+            Home
+        </button>
+        <button class="buttonCust2">
+            Shopping
+        </button>
+        <button class="buttonCust3">
+            Contact Us
+        </button>
+        <button class="buttonCust4">
+            Account
+        </button>
+    </div>
+    <div style="padding-right: 20px;">
+        <button class="btn btn-link p-2">
+            <i class="bi bi-search fs-5 text-white"></i>
+        </button>
+
+        <button class="btn btn-link p-2">
+            <i class="bi bi-cart fs-5 text-white"></i>
+        </button>
+    </div>
 </nav>
 
 <!-- Hero -->
@@ -89,7 +104,7 @@
 
     $('.color-box.bg-dark').click(function () {
       $('.hero-img').fadeOut('fast', function () {
-        $(this).attr('src', 'images/headphonesShopping.jpg').fadeIn('fast');
+        $(this).attr('src', 'images/blackHead.png').fadeIn('fast');
       });
     });
 
@@ -100,13 +115,13 @@
     // Unblur and navigate on hover/click
     $('.img-fluid-rounded-1').hover(function () {
         $(this).css('filter', 'blur(0)');
-      }, function() {
+    }, function() {
         $(this).css('filter', 'blur(5px)')
-      })
+    })
       
       .click(function () {
         window.location.href = 'http://127.0.0.1:5500/build/views/speakers.html';
-      });
+    });
 
     $('.img-fluid-rounded-2').hover(function () {
         $(this).css('filter', 'blur(0)');
@@ -137,9 +152,24 @@
     .click(function () {
         window.location.href = 'http://127.0.0.1:5500/build/views/earphones.html';
     })
+
+    $('.buttonCust1').click(function() {
+        window.location.href = 'http://127.0.0.1:5500/build/views/home.html'
+    });
+
+    $('.buttonCust2').click(function() {
+        window.location.href = 'http://127.0.0.1:5500/build/views/shopping.html'
+    });
+
+    $('.buttonCust3').click(function() {
+        window.location.href = 'http://127.0.0.1:5500/build/views/contactUs.html'
+    });
+
+    $('.buttonCust4').click(function() {
+        window.location.href = 'http://127.0.0.1:5500/build/views/account.html'
+    });
 });
+
 </script>
-
-
 </body>
 </html>
