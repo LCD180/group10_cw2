@@ -5,21 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Sony Headphones</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="/build/styles/style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
 <!-- Nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-<a class="navbar-brand" href="#">🎧</a>
-<div class="collapse navbar-collapse">
-    <ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Shopping</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
-    </ul>
-</div>
+<nav class="navglass" style="position: sticky; top: 10px; z-index: 1000;">
+    <div style="font-size: larger; padding-left: 20px; padding-right: 5px;">
+        <i class="bi bi-earbuds fs-5 text-white"></i>
+        <button class="buttonCust" data-page="home">
+            Home
+        </button>
+        <button class="buttonCust" data-page="shopping">
+            Shopping
+        </button>
+        <button class="buttonCust" data-page="contact">
+            Contact Us
+        </button>
+        <button class="buttonCust" data-page="account">
+            Account
+        </button>
+    </div>
+    <div style="padding-right: 20px;">
+        <button class="btn btn-link p-2" data-page="search">
+            <i class="bi bi-search fs-5 text-white"></i>
+        </button>
+
+        <button class="btn btn-link p-2" data-page="cart">
+            <i class="bi bi-cart fs-5 text-white"></i>
+        </button>
+    </div>
 </nav>
 
 <div class="top-container" style="margin-top: -140px; display: flex; flex-direction: column;">
@@ -28,8 +45,8 @@
     <div style="margin-top: 15px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
     
         <strong>Colours :</strong>
-        <button class="color-box bg-white border"></button>
-        <button class="color-box bg-dark border"></button>
+        <button class="color-box bg-white border" id="whiteBtn"></button>
+        <button class="color-box bg-dark border" id="blackBtn"></button>
     </div>
 </div>
 
@@ -52,7 +69,7 @@
         </p>
         <div style="max-width: 700px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 1rem;">
             <p style="margin: 0;"><strong>£399.99</strong></p>
-            <button class="btn btn-info text-white px-4">Purchase</button>
+            <button class="btn btn-info text-white px-4" id="purchase">Purchase</button>
         </div>
     </div>
 </div>
@@ -60,23 +77,92 @@
 
 <hr style="margin-inline: 40px;"/>
 
-<!-- Listening Options -->
-<section class="text-center py-5 bg-light">
-<h3 class="mb-4">Find your favourite way to listen to music..</h3>
-<div class="container">
-    <div class="row g-4">
-    <div class="col-md-3">
-        <img src="images/speakers.jpg" class="img-fluid rounded" style = "height: 617px;" alt="Speakers" />
-    </div>
-    <div class="col-md-3">
-        <img src="images/turntable.jpg" class="img-fluid rounded" style = "height: 617px;" alt="DJ Turntable" />
-    </div>
-    <div class="col-md-3">
-        <img src="images/earphones.jpg" class="img-fluid rounded" style = "height: 617px;" alt="Earbuds" />
-    </div>
-    <div class="col-md-3">
-        <img src="images/headphonesShopping.jpg" class="img-fluid rounded" style = "height: 617px;" alt="Vintage Sony" />
-    </div>
+<section class="text-center py-5 bg-light" style="background-color: white;">
+    <h3 class="mb-4" style="padding-bottom: 15px;">Find your favourite way to listen to music..</h3>
+    <div class="container">
+      <div class="row g-4">
+  
+        <div class="col-md-3">
+          <div style="position: relative;">
+            <img src="images/speakers.jpg" class="img-fluid rounded blur-on-hover" style="height: 617px; width: 100%; object-fit: cover;" alt="Speakers" id="speakers" />
+            <div style="
+              font-size: larger;
+              position: absolute;
+              bottom: 10px;
+              left: 0;
+              width: 100%;
+              text-align: center;
+              color: white;
+              background: rgba(15, 14, 14, 0.5);
+              padding: 8px;
+              font-weight: bold;
+            ">
+              Speakers
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div style="position: relative;">
+            <img src="images/turntable.jpg" class="img-fluid rounded blur-on-hover" style="height: 617px; width: 100%; object-fit: cover;" alt="DJ Turntable" id="turntable" />
+            <div style="
+              font-size: larger;
+              position: absolute;
+              bottom: 10px;
+              left: 0;
+              width: 100%;
+              text-align: center;
+              color: white;
+              background: rgba(0, 0, 0, 0.5);
+              padding: 8px;
+              font-weight: bold;
+            ">
+              Turntable
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div style="position: relative;">
+            <img src="images/earphones.jpg" class="img-fluid rounded blur-on-hover" style="height: 617px; width: 100%; object-fit: cover;" alt="Earbuds" id="earbuds" />
+            <div style="
+              font-size: larger;
+              position: absolute;
+              bottom: 10px;
+              left: 0;
+              width: 100%;
+              text-align: center;
+              color: white;
+              background: rgba(0, 0, 0, 0.5);
+              padding: 8px;
+              font-weight: bold;
+            ">
+              Earphones
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div style="position: relative;">
+            <img src="images/headphonesShopping.jpg" class="img-fluid rounded blur-on-hover" style="height: 617px; width: 100%; object-fit: cover;" alt="Vintage Sony" id="vintage" />
+            <div style="
+              font-size: larger;
+              position: absolute;
+              bottom: 10px;
+              left: 0;
+              width: 100%;
+              text-align: center;
+              color: white;
+              background: rgba(0, 0, 0, 0.5);
+              padding: 8px;
+              font-weight: bold;
+            ">
+              Headphones
+            </div>
+          </div>
+        </div>
+  
+      </div>
     </div>
   </section>
 
@@ -124,9 +210,23 @@
         <li>Accessibility</li>
       </ul>
 </div>
-
 <script>
   $(document).ready(function () {
+    const routes = {
+      home: "/build/views/home.html",
+      shopping: "/build/views/shopping.html",
+      contact: "/build/views/contact.html",
+      account: "/build/views/account.html",
+      cart: "/build/views/cart.html"
+    };
+
+    $("[data-page]").click(function () {
+      const page = $(this).data("page");
+      if (routes[page]) {
+        window.location.href = routes[page];
+      }
+    });
+
     $('.color-box.bg-white').click(function () {
       $('.hero-img').fadeOut('fast', function () {
         $(this).attr('src', 'images/head.png').fadeIn('fast');
@@ -135,72 +235,31 @@
 
     $('.color-box.bg-dark').click(function () {
       $('.hero-img').fadeOut('fast', function () {
-        $(this).attr('src', 'images/blackHead.png').fadeIn('fast');
+        $(this).attr('src', 'images/headblack.png').fadeIn('fast');
       });
     });
 
-    $('.btn-info').click(function () {
-      window.location.href = 'http://127.0.0.1:5500/build/views/cart.html';
-    });
-
-    // Unblur and navigate on hover/click
-    $('.img-fluid-rounded-1').hover(function () {
-        $(this).css('filter', 'blur(0)');
-    }, function() {
-        $(this).css('filter', 'blur(5px)')
-    })
-      
-      .click(function () {
-        window.location.href = 'http://127.0.0.1:5500/build/views/speakers.html';
-    });
-
-    $('.img-fluid-rounded-2').hover(function () {
-        $(this).css('filter', 'blur(0)');
-    }, function() {
-        $(this).css('filter', 'blur(5px)')
+    $("#purchase").click(function() {
+      window.location.href = "/build/views/cart.html"
     })
 
-    .click(function () {
-        window.location.href = 'http://127.0.0.1:5500/build/views/turntable.html';
+    $('#speakers').click(function() {
+      window,location.href = "..."
     })
 
-    $('.img-fluid-rounded-3').hover(function () {
-        $(this).css('filter', 'blur(0)');
-    }, function() {
-        $(this).css('filter', 'blur(5px)')
+    $('#turntable').click(function() {
+      window,location.href = "..."
     })
 
-    .click(function () {
-        window.location.href = 'http://127.0.0.1:5500/build/views/headphones.html';
+    $('#earbuds').click(function() {
+      window,location.href = "..."
     })
 
-     $('.img-fluid-rounded-4').hover(function () {
-        $(this).css('filter', 'blur(0)');
-    }, function() {
-        $(this).css('filter', 'blur(5px)')
+    $('#vintage').click(function() {
+      window,location.href = "..."
     })
-
-    .click(function () {
-        window.location.href = 'http://127.0.0.1:5500/build/views/earphones.html';
-    })
-
-    $('.buttonCust1').click(function() {
-        window.location.href = 'http://127.0.0.1:5500/build/views/home.html'
-    });
-
-    $('.buttonCust2').click(function() {
-        window.location.href = 'http://127.0.0.1:5500/build/views/shopping.html'
-    });
-
-    $('.buttonCust3').click(function() {
-        window.location.href = 'http://127.0.0.1:5500/build/views/contactUs.html'
-    });
-
-    $('.buttonCust4').click(function() {
-        window.location.href = 'http://127.0.0.1:5500/build/views/account.html'
-    });
-});
-
+  });
 </script>
+
 </body>
 </html>
