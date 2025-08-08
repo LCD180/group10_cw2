@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Your existing nav bar goes here -->
+
+  <!-- Tabs -->
+  <div class = "nav-wrapper">
+    <nav class="navglass" style="position: sticky; top: 10px; z-index: 1000;">
+        <div style="font-size: larger; padding-left: 20px; padding-right: 5px;">
+            <i class="bi bi-earbuds fs-5 text-white"></i>
+            <button class="buttonCust">
+                Home
+            </button>
+            <button class="buttonCust">
+                Shopping
+            </button>
+            <button class="buttonCust">
+                Contact Us
+            </button>
+            <button class="buttonCust">
+                Account
+            </button>
+        </div>
+        <div style="padding-right: 20px;">
+            <button class="btn btn-link p-2">
+                <i class="bi bi-search fs-5 text-white"></i>
+            </button>
+    
+            <button class="btn btn-link p-2">
+                <i class="bi bi-cart fs-5 text-white"></i>
+            </button>
+        </div>
+    </nav>
+    </div>
+    
+    <!-- Filters -->
+    <div class="tabs">
+        <a href="#" class="tab active">Details</a>
+        <a href="#" class="tab">Payment</a>
+        <a href="#" class="tab">Terms & Conditions</a>
+        <button class="logout-btn">Log Out</button>
+      </div>
+  <!-- Form Box -->
+  <div class="form-container">
+    <form>
+      <label for="first-name">Card Number:</label>
+      <input type="text" id="first-name" placeholder="xxxx xxxx xxxx xxxx">
+
+      <label for="last-name">CardHolder Name:</label>
+      <input type="text" id="last-name" placeholder="Name">
+
+      <label for="email">CVC:</label>
+      <input type="email" id="email" placeholder="xxx">
+
+      <label>Expiry Date:</label>
+    <div class="expiry-container">
+        <select>
+            <option>Month</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <select>
+            <option>Year</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+        </select>
+
+      <div class="form-buttons">
+        <button type="button" class="cancel-btn">Delete</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+        <button type="submit" class="save-btn">Save</button>
+
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
