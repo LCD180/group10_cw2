@@ -32,11 +32,11 @@
     margin: 10px;
     margin-inline: auto;
 
-    width: 680px;
+    max-width: 680px;
     height: 65px;
     padding: 5px;
     padding-inline: 6px;
-    gap: 10px;
+    gap: auto;
     
     justify-content: space-between;
     align-items: center;
@@ -71,24 +71,38 @@
     height: auto;
     display: flex;
 }
-
 .buttonCust {
-    border: transparent;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    padding: 0.8em 1.2em 0.8em 1em;
-    transition: all ease-in-out 0.2s;
-    font-size: 16px;
-    font-weight: bolder;
+  border: transparent;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5em 0.8em; 
+  transition: all ease-in-out 0.2s;
+  font-size: clamp(14px, 2vw, 16px); 
+  font-weight: bolder;
+  min-width: max-content; 
 }
 
 .buttonCust span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 900;
+  gap: 0.3em; 
+}
+
+@media (max-width: 768px) {
+  .buttonCust {
+      padding: 0.4em 0.6em; 
+      font-size: clamp(12px, 3.5vw, 14px);
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonCust {
+      padding: 0.3em 0.5em;
+  }
 }
 
 .buttonCust:hover {
@@ -294,7 +308,7 @@ body {
 .hero2-img {
     position: absolute;
     right: -100%;
-    top: 50%;
+    top: 10%;
     transform: translateY(-50%);
     max-height: 80vh;
     width: auto;
@@ -482,3 +496,9 @@ body {
       animation: fadeOutRight 0.5s ease forwards;
     }
   }
+
+
+.imghover:hover{
+    width: 101%;
+    height: 101%;
+}
