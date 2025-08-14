@@ -482,3 +482,16 @@ body {
       animation: fadeOutRight 0.5s ease forwards;
     }
   }
+
+  .cartAmount {
+  position: absolute;
+  top: 5px;      /* move above the cart */
+  right: 15px;    /* shift to the right */
+  background: #666666;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: 1;
+}
