@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<div class = "nav-wrapper">
 <nav class="navglass" style="position: sticky; top: 10px; z-index: 1000;">
     <div style="font-size: larger; padding-left: 20px; padding-right: 5px;">
         <i class="bi bi-earbuds fs-5 text-white"></i>
@@ -31,12 +32,14 @@
         <button class="btn btn-link p-2" data-page="search">
             <i class="bi bi-search fs-5 text-white"></i>
         </button>
-
+ 
         <button class="btn btn-link p-2" data-page="cart">
             <i class="bi bi-cart fs-5 text-white"></i>
+            <span id="cartAmount" class="cartAmount">0</span>
         </button>
     </div>
 </nav>
+</div>
 
 <div class="top-container" style="margin-top: -140px; display: flex; flex-direction: column;">
     <img src="images/head.png" alt="Sony Headphones" class="hero-img"/>
@@ -209,55 +212,72 @@
         <li>Accessibility</li>
       </ul>
 </div>
+<script src="data.js"></script>
+<script src="shop.js"></script>
 <script>
   $(document).ready(function () {
+    
     const routes = {
-      home: "/build/views/home.html",
-      shopping: "/build/views/shopping.html",
-      contact: "/build/views/contact.html",
-      account: "/build/views/account.html",
-      cart: "/build/views/cart.html"
+        home: "/build/views/home.html",
+        shopping: "/build/views/shopping.html",
+        contact: "/build/views/contact.html",
+        account: "/build/views/account.html",
+        cart: "/build/views/cart.html"
     };
 
+    
     $("[data-page]").click(function () {
-      const page = $(this).data("page");
-      if (routes[page]) {
-        window.location.href = routes[page];
-      }
+        const page = $(this).data("page");
+        if (routes[page]) {
+            window.location.href = routes[page];
+        }
     });
 
-    $('.color-box.bg-white').click(function () {
-      $('.hero-img').fadeOut('fast', function () {
-        $(this).attr('src', 'images/head.png').slideDown('fast');
-      });
+    
+    let selectedColor = "white";
+
+    
+    $('#whiteBtn').click(function () {
+        selectedColor = "white";
+        $('.hero-img').fadeOut('fast', function () {
+            $(this).attr('src', 'images/head.png').slideDown('fast');
+        });
     });
 
-    $('.color-box.bg-dark').click(function () {
-      $('.hero-img').fadeOut('fast', function () {
-        $(this).attr('src', 'images/headblack.png').slideDown('fast');
-      });
+    $('#blackBtn').click(function () {
+        selectedColor = "black";
+        $('.hero-img').fadeOut('fast', function () {
+            $(this).attr('src', 'images/headblack.png').slideDown('fast');
+        });
     });
 
-    $("#purchase").click(function() {
-      window.location.href = "/build/views/cart.html"
-    })
+    
+    $('#purchase').click(function () {
+        if (selectedColor === "white") {
+            window.location.href = "/build/views/shoppingmenu.html";
+        } else if (selectedColor === "black") {
+            window.location.href = "/build/views/shoppingMenuBlack.html";
+        }
+    });
 
-    $('#speakers').click(function() {
-      window,location.href = "..."
-    })
+    
+    $('#speakers').click(function () {
+        window.location.href = "/build/views/speakers.html";
+    });
 
-    $('#turntable').click(function() {
-      window,location.href = "..."
-    })
+    $('#turntable').click(function () {
+        window.location.href = "/build/views/turntable.html";
+    });
 
-    $('#earbuds').click(function() {
-      window,location.href = "..."
-    })
+    $('#earbuds').click(function () {
+        window.location.href = "/build/views/earphones.html";
+    });
 
-    $('#vintage').click(function() {
-      window,location.href = "..."
-    })
-  });
+    $('#vintage').click(function () {
+        window.location.href = "/build/views/shoppingmenu.html";
+    });
+});
+
 </script>
 
 </body>

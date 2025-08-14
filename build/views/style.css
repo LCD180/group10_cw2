@@ -105,6 +105,19 @@
   color: #969696;
 }
 
+.cartAmount {
+  position: absolute;
+  top: 5px;      /* move above the cart */
+  right: 15px;    /* shift to the right */
+  background: #666666;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: 1;
+}
+
 .color-box {
   display: inline-block;
   width: 24px;
@@ -239,25 +252,57 @@ body {
 /* Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible columns */
   gap: 20px;
   padding: 30px;
+  justify-items: center; /* centers cards inside their grid cells */
+  max-width: 1200px; /* keeps the grid from stretching too wide */
+  margin: 0 auto; /* centers grid on page */
+  box-sizing: border-box;
 }
+
 .product-card {
   background: white;
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
+  width: 250px; /* consistent card width */
 }
+
 .product-card img {
   width: 100%;
   max-width: 180px;
   margin-bottom: 10px;
 }
-.price {
+/* .price {
   color: #999;
   font-size: 14px;
+} */
+
+.new-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 55px;
+  color: #999
 }
+
+.buttons-plus-minus {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 50px;
+}
+
+.bi-dash-lg {
+  color:red
+} 
+
+.bi-plus-lg {
+  color: green
+}
+
+
 
 /* Pagination */
 .pagination {
@@ -423,3 +468,202 @@ body {
 .save-btn:hover {
   background-color: #17A2B8;
 }
+
+ i {
+  cursor: pointer;
+}
+
+.bi-x-lg {
+  color: red;
+  font-weight: normal;
+}
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+.cart-item {
+  border: 10px solid black;
+  border-radius: 5px;
+  display: flex;
+}
+
+.title-price-x {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Basket container - centered and responsive */
+.basket-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Main basket box */
+.basket-left {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Basket items */
+.basket-item,
+.cartItem { /* support both old and new JS output */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+/* Product image */
+.basket-item img,
+.cartItem img {
+  width: 60px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Product info area */
+.basket-info,
+.details {
+  flex: 1;
+}
+
+/* Product name */
+.item-name,
+.details p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Product price */
+.item-price,
+.details p:last-child {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Quantity controls */
+.buttons-plus-minus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttons-plus-minus i {
+  cursor: pointer;
+}
+
+/* Total price text */
+.basket-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Checkout button */
+.checkout-btn {
+  display: inline-block;
+  background: teal;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #006666;
+}
+
+/* When basket is empty */
+#label h2 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.HomeBtn {
+  margin-top: 10px;
+  background: teal;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+
+  background-color: #fafafa;
+
+}
+ 
+.contact-box {
+
+  max-width: 800px;
+
+  margin: auto;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+
+}
+ 
+.contact-box a {
+
+  color: #007bff;
+
+  text-decoration: none;
+
+}
+ 
+.contact-box a:hover {
+
+  text-decoration: underline;
+
+}
+ 
+.contact-box h6 {
+
+  font-weight: bold;
+
+  margin-top: 1rem;
+
+}
+
+.order-confirmed {
+  margin: 50px auto;
+  text-align: center;
+  padding: 40px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: #f8f9fa;
+  max-width: 500px;
+}
+.order-confirmed h2 {
+  margin-bottom: 20px;
+  color: #28a745;
+}
+.order-confirmed p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+ 
+
+ 
