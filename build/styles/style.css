@@ -1,5 +1,4 @@
 :root {
-    /* These are the default light themes for our project */
     --bg-primary: #ffffff;
     --bg-secondary: #f5f5f5;
     --text-primary: #333333;
@@ -10,7 +9,6 @@
   
 @media (prefers-color-scheme: dark) {
     :root {
-        /* These are the default dark themes for our project (overides if we want are dark mode turned on) */
         --bg-primary: #121212;
         --bg-secondary: #1e1e1e;
         --text-primary: #f5f5f5;
