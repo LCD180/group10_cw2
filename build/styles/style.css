@@ -501,4 +501,17 @@ body {
 .imghover:hover{
     width: 101%;
     height: 101%;
+  }
+
+.cartAmount {
+  position: absolute;
+  top: 5px;
+  right: 15px; 
+  background: #666666;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: 1;
 }

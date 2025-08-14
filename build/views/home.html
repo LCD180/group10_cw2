@@ -12,32 +12,27 @@
 <body>
 
 <!-- Nav -->
-<nav class="navglass" style="position: sticky; top: 10px; z-index: 1000;">
-    <div style="font-size: larger; padding-left: 20px; padding-right: 5px;">
-        <i class="bi bi-earbuds fs-5 text-white"></i>
-        <button class="buttonCust" data-page="home">
-            Home
-        </button>
-        <button class="buttonCust" data-page="shopping">
-            Shopping
-        </button>
-        <button class="buttonCust" data-page="contact">
-            Contact Us
-        </button>
-        <button class="buttonCust" data-page="account">
-            Account
-        </button>
-    </div>
-    <div style="padding-right: 20px;">
-        <button class="btn btn-link p-2" data-page="search">
+<div class="nav-wrapper">
+      <nav class="navglass" style="position: sticky; top: 10px; z-index: 1000">
+        <div style="font-size: larger; padding-left: 20px; padding-right: 5px">
+          <i class="bi bi-earbuds fs-5 text-white"></i>
+          <button class="buttonCust" data-page="home">Home</button>
+          <button class="buttonCust" data-page="shopping">Shopping</button>
+          <button class="buttonCust" data-page="contact">Contact Us</button>
+          <button class="buttonCust" data-page="account">Account</button>
+        </div>
+        <div style="padding-right: 20px">
+          <button class="btn btn-link p-2" data-page="search">
             <i class="bi bi-search fs-5 text-white"></i>
-        </button>
+          </button>
 
-        <button class="btn btn-link p-2" data-page="cart">
+          <button class="btn btn-link p-2" data-page="cart">
             <i class="bi bi-cart fs-5 text-white"></i>
-        </button>
+            <span id="cartAmount" class="cartAmount">0</span>
+          </button>
+        </div>
+      </nav>
     </div>
-</nav>
 
 <div class="top-container" style="margin-top: -200px; display: flex; flex-direction: row; align-items: flex-start; padding-left: 6px;">
   <div class="cater3-movingBG">
@@ -222,6 +217,8 @@
         <li>Accessibility</li>
       </ul>
 </div>
+<script src="data.js"></script>
+<script src="home.js"></script>
 <script>
   $(document).ready(function () {
       const routes = {
@@ -244,15 +241,15 @@
     });
 
     $('#basket').click(function() {
-      window,location.href = "..."
+      window,location.href = "http://127.0.0.1:5500/build/views/cart.html"
     });
 
     $('#contact').click(function() {
-      window,location.href = "..."
+      window,location.href = "http://127.0.0.1:5500/build/views/contact.html"
     });
 
     $('#account').click(function() {
-      window,location.href = "..."
+      window,location.href = "http://127.0.0.1:5500/build/views/account.html"
     });
   
   });
