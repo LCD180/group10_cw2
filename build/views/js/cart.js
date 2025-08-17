@@ -3,7 +3,7 @@ let shoppingCart = document.getElementById("shopping-cart");
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-// Update cart icon with total items
+
 let calculation = () => {
     let cartIcon = document.getElementById("cartAmount");
     cartIcon.innerHTML = basket.reduce((sum, x) => sum + x.item, 0);
@@ -11,7 +11,7 @@ let calculation = () => {
 
 calculation();
 
-// Increment item quantity
+
 let increment = (id) => {
     let search = basket.find(x => x.id === id);
 
@@ -23,24 +23,24 @@ let increment = (id) => {
 
     update(id);
     localStorage.setItem("data", JSON.stringify(basket));
-    generateCardItems(); // Refresh cart
+    generateCardItems(); 
 };
 
-// Decrement item quantity
+
 let decrement = (id) => {
     let search = basket.find(x => x.id === id);
 
     if (!search || search.item === 0) return;
 
     search.item -= 1;
-    basket = basket.filter(x => x.item !== 0); // Remove items with 0 quantity
+    basket = basket.filter(x => x.item !== 0); 
 
     update(id);
     localStorage.setItem("data", JSON.stringify(basket));
-    generateCardItems(); // Refresh cart
+    generateCardItems(); 
 };
 
-// Update quantity display and cart icon
+
 let update = (id) => {
     const quantityDiv = document.getElementById(`quantity-${id}`);
     let search = basket.find(x => x.id === id);
@@ -61,7 +61,7 @@ let generateCardItems = () => {
         shoppingCart.innerHTML = basket.map((x) => {
             let { id, item } = x;
 
-            // Look in all arrays: white headphones, black headphones, speakers, earphones, turntable
+            
             let search = products.find(y => y.id === id) 
                       || headBlack.find(y => y.id === id) 
                       || speakers.find(y => y.id === id) 
@@ -103,6 +103,6 @@ let generateCardItems = () => {
     }
 };
 
-// Initialize cart
+
 generateCardItems();
 calculation();

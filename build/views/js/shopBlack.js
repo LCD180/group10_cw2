@@ -1,8 +1,8 @@
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-const shopContainer = document.getElementById("shop-container"); // target correct container
+const shopContainer = document.getElementById("shop-container"); 
 
-// Generate black headphones shop
+
 let generateShopBlack = () => {
     shopContainer.innerHTML = headBlack.map(product => {
         let search = basket.find(x => x.id === product.id) || {};

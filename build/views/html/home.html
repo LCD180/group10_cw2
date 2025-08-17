@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sony Headphones</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/build/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <nav class="navglass" style="position: sticky; top: 10px; z-index: 1000">
+        <div style="font-size: larger; padding-left: 20px; padding-right: 5px">
+          <i class="bi bi-earbuds fs-5 text-white"></i>
+          <button class="buttonCust" data-page="home">Home</button>
+          <button class="buttonCust" data-page="shopping">Shopping</button>
+          <button class="buttonCust" data-page="contact">Contact Us</button>
+          <button class="buttonCust" data-page="account">Account</button>
+        </div>
+        <div style="padding-right: 20px">
+          <button class="btn btn-link p-2" data-page="search">
+            <i class="bi bi-search fs-5 text-white"></i>
+          </button>
+
+          <button class="btn btn-link p-2" data-page="cart">
+            <i class="bi bi-cart fs-5 text-white"></i>
+            <span id="cartAmount" class="cartAmount">0</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="top-containerext"
+      style="
+        margin-top: -200px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-left: 6px;
+      "
+    >
+      <div class="cater3-movingBG">
+        <div class="flyinTxtCont">
+          <div class="flyIn lineOne">THE</div>
+          <div class="flyIn lineTwo">AUX</div>
+          <div class="flyIn lineThree">SHOP</div>
+          <div class="flyIn lineFour">The Audio Shop for all your needs</div>
+        </div>
+      </div>
+      <img src="../images/airpods.png" alt="airpods" class="hero2-img" />
+    </div>
+
+    <hr style="margin-inline: 40px; margin-top: -40px" />
+
+    <section class="text-center py-5 bg-white" style="background-color: white">
+      <h3 class="mb-4" style="padding-bottom: 15px">
+        What would you like to do today?
+      </h3>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div style="position: relative">
+              <img
+                src="../images/speakers.jpg"
+                class="img-fluid rounded blur-on-hover"
+                style="height: 617px; width: 100%; object-fit: cover"
+                alt="Speakers"
+                id="speakers"
+              />
+              <div
+                style="
+                  font-size: larger;
+                  position: absolute;
+                  bottom: 10px;
+                  left: 0;
+                  width: 100%;
+                  text-align: center;
+                  color: white;
+                  background: rgba(15, 14, 14, 0.5);
+                  padding: 8px;
+                  font-weight: bold;
+                "
+              >
+                Shopping
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div style="position: relative">
+              <img
+                src="../images/Basket.jpeg"
+                class="img-fluid rounded blur-on-hover"
+                style="height: 617px; width: 100%; object-fit: cover"
+                alt="DJ Turntable"
+                id="basket"
+              />
+              <div
+                style="
+                  font-size: larger;
+                  position: absolute;
+                  bottom: 10px;
+                  left: 0;
+                  width: 100%;
+                  text-align: center;
+                  color: white;
+                  background: rgba(0, 0, 0, 0.5);
+                  padding: 8px;
+                  font-weight: bold;
+                "
+              >
+                Basket
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div style="position: relative">
+              <img
+                src="../images/ContactUs.jpeg"
+                class="img-fluid rounded blur-on-hover"
+                style="height: 617px; width: 100%; object-fit: cover"
+                alt="Earbuds"
+                id="contact"
+              />
+              <div
+                style="
+                  font-size: larger;
+                  position: absolute;
+                  bottom: 10px;
+                  left: 0;
+                  width: 100%;
+                  text-align: center;
+                  color: white;
+                  background: rgba(0, 0, 0, 0.5);
+                  padding: 8px;
+                  font-weight: bold;
+                "
+              >
+                Contact Us
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div style="position: relative">
+              <img
+                src="../images/Account.jpeg"
+                class="img-fluid rounded blur-on-hover"
+                style="height: 617px; width: 100%; object-fit: cover"
+                alt="Vintage Sony"
+                id="account"
+              />
+              <div
+                style="
+                  font-size: larger;
+                  position: absolute;
+                  bottom: 10px;
+                  left: 0;
+                  width: 100%;
+                  text-align: center;
+                  color: white;
+                  background: rgba(0, 0, 0, 0.5);
+                  padding: 8px;
+                  font-weight: bold;
+                "
+              >
+                Account
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr style="margin-inline: 40px" />
+
+    <div
+      class="bottom-container"
+      style="max-width: 800px; margin: 0 auto; padding: 20px"
+    >
+      <strong
+        style="
+          align-self: center;
+          font-size: xx-large;
+          margin-bottom: 18px;
+          color: darkslategrey;
+        "
+        >OUR STORY</strong
+      >
+
+      <p class="lead" style="font-size: 1.1rem; line-height: 20px">
+        One music lover. One broken speaker. One simple idea:
+        <em>sound should feel real</em>.<br /><br />
+
+        That’s how <strong>The Aux Shop</strong> started — fixing what others
+        got wrong, so every note hits the heart.<br />
+        No gimmicks. Just music, pure.<br /><br />
+
+        At The Aux Shop, we believe music deserves to be heard as it was
+        intended – with clarity, depth, and emotion.<br />
+        We craft audio equipment for those who listen with their hearts, not
+        just their ears.<br /><br />
+
+        Every product reflects our commitment to:
+      </p>
+
+      <ul style="font-size: 1.1rem; line-height: 1.6">
+        <div>
+          <strong>Authenticity</strong> – No artificial enhancements, just
+          true-to-life sound
+        </div>
+        <div>
+          <strong>Craftsmanship</strong> – Meticulous engineering meets timeless
+          design
+        </div>
+        <div>
+          <strong>Respect for Music</strong> – Technology that serves the art,
+          not overshadows it
+        </div>
+      </ul>
+
+      <p
+        class="lead"
+        style="font-size: 1.1rem; line-height: 1.6; margin-top: 20px"
+      >
+        Because when sound is pure, music comes alive.<br />
+        <strong style="font-weight: bold"
+          >The Aux Shop – Listen Differently.</strong
+        >
+      </p>
+    </div>
+
+    <hr style="margin-inline: 40px" />
+
+    <div style="text-align: center; margin: 30px">
+      <strong style="font-size: xx-large; color: darkslategrey">
+        "Without music, life would be a mistake." - Friedrich Nietzsche
+      </strong>
+    </div>
+
+    <hr style="margin-inline: 40px" />
+
+    <div
+      class="top-containerNoGrad"
+      style="margin-top: -180px; margin-bottom: -180px"
+    >
+      <img src="../images/adone.png" alt="Sony Headphones" class="img" />
+    </div>
+
+    <hr style="margin-inline: 40px" />
+
+    <div
+      style="
+        background-color: #2c2c2c;
+        width: auto;
+        height: 300px;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+      "
+    >
+      <ul style="list-style: none; padding: 0">
+        <li>Support</li>
+        <li>Order Status</li>
+        <li>Help Center</li>
+        <li>Guides</li>
+        <li>Warranty</li>
+        <li>Community</li>
+      </ul>
+
+      <ul style="list-style: none; padding: 0">
+        <li>Shop Audio</li>
+        <li>Headphones</li>
+        <li>Earphones</li>
+        <li>Speakers</li>
+        <li>Turntables</li>
+      </ul>
+
+      <ul style="list-style: none; padding: 0">
+        <li>Company</li>
+        <li>About Us</li>
+        <li>Newsroom</li>
+        <li>Careers</li>
+        <li>Contact</li>
+      </ul>
+
+      <ul style="list-style: none; padding: 0">
+        <li>Values</li>
+        <li>Sustainability</li>
+        <li>Privacy</li>
+        <li>Accessibility</li>
+      </ul>
+    </div>
+    <script src="../js/data.js"></script>
+    <script src="../js/home.js"></script>
+    <script>
+      $(document).ready(function () {
+        const routes = {
+          home: "../html/home.html",
+          shopping: "../html/shopping.html",
+          contact: "../html/contact.html",
+          account: "../html/detailsmenu.html",
+          cart: "../html/cart.html",
+        };
+
+        $("[data-page]").click(function () {
+          const page = $(this).data("page");
+          if (routes[page]) {
+            window.location.href = routes[page];
+          }
+        });
+
+        $("#speakers").click(function () {
+          window.location.href = "../html/shopping.html";
+        });
+
+        $("#basket").click(function () {
+          window.location.href = "../html/cart.html";
+        });
+
+        $("#contact").click(function () {
+          window.location.href = "../html/contact.html";
+        });
+
+        $("#account").click(function () {
+          window.location.href = "../html/detailsmenu.html";
+        });
+      });
+    </script>
+  </body>
+</html>
